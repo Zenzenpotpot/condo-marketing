@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://condo.yinzhentechnologies.com/sitemap.xml
