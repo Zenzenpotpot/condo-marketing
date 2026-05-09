@@ -56,17 +56,53 @@
     .plans { background: linear-gradient(145deg, #121d2e, #0d1520); border: 1px solid #243352; border-radius: 18px; padding: 2rem; margin: 2rem 0; }
     .plan-item { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #1a2740; }
     .plan-item:last-child { border-bottom: none; }
-    .plan-name { font-weight: 600; color: #f0f4ff; }
-    .plan-price { color: #d4a853; font-weight: 500; }
-    .plan-units { font-size: 0.85rem; color: #94a3b8; }
+    .plan-name { font-weight: 600; color: #f0f4ff; min-width: 140px; }
+    .plan-units { font-size: 0.85rem; color: #94a3b8; flex: 1; }
+    .plan-price { color: #d4a853; font-weight: 500; min-width: 130px; text-align: right; }
     .offer-banner { background: linear-gradient(135deg, rgba(251,191,36,0.1), rgba(251,191,36,0.05)); border: 1px solid rgba(251,191,36,0.3); border-left: 4px solid #fbbf24; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
     .offer-banner p { margin-bottom: 0; color: #fbbf24; font-weight: 500; }
     .grandfather-banner { background: linear-gradient(135deg, rgba(52,211,153,0.1), rgba(52,211,153,0.05)); border: 1px solid rgba(52,211,153,0.3); border-left: 4px solid #34d399; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
     .grandfather-banner p { margin-bottom: 0; color: #34d399; font-weight: 500; }
+    .trust-banner { background: linear-gradient(135deg, rgba(212,168,83,0.12), rgba(212,168,83,0.04)); border: 1px solid rgba(212,168,83,0.35); border-left: 4px solid #d4a853; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
+    .trust-banner p { margin-bottom: 0; color: #f0f4ff; font-weight: 500; }
+    .trust-banner .highlight { color: #d4a853; font-size: 1.15rem; }
+
+    /* Feature comparison table */
+    .feature-table { width: 100%; border-collapse: collapse; margin: 2rem 0; background: linear-gradient(145deg, #121d2e, #0d1520); border: 1px solid #243352; border-radius: 18px; overflow: hidden; }
+    .feature-table th { text-align: left; padding: 14px 18px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #94a3b8; border-bottom: 1px solid #1a2740; background: rgba(13,21,32,0.6); }
+    .feature-table th:first-child { width: 50%; }
+    .feature-table th:nth-child(2), .feature-table th:nth-child(3), .feature-table th:nth-child(4) { text-align: center; width: 16.6%; }
+    .feature-table td { padding: 13px 18px; font-size: 0.85rem; color: #dde4ef; border-bottom: 1px solid rgba(26,39,64,0.6); }
+    .feature-table td:nth-child(2), .feature-table td:nth-child(3), .feature-table td:nth-child(4) { text-align: center; }
+    .feature-table .check { color: #34d399; font-size: 1.1rem; }
+    .feature-table .cross { color: #f87171; font-size: 1.1rem; }
+    .feature-table .row-header { font-weight: 600; color: #f0f4ff; }
+
+    /* Competitive hook banner */
+    .competitor-hook { background: linear-gradient(135deg, #0d1520, #121d2e); border: 2px solid rgba(212,168,83,0.5); border-radius: 18px; padding: 2rem; margin: 2rem 0; text-align: center; }
+    .competitor-hook p { margin-bottom: 0; font-size: 1.1rem; line-height: 1.8; }
+    .competitor-hook .strikethrough { text-decoration: line-through; color: #f87171; }
+
+    /* Slot counter */
+    .slot-counter { display: inline-flex; align-items: center; gap: 10px; background: rgba(251,191,36,0.12); border: 1px solid rgba(251,191,36,0.4); border-radius: 99px; padding: 10px 22px; font-weight: 600; color: #fbbf24; font-size: 0.95rem; margin: 1rem 0; }
+    .slot-counter .count { font-size: 1.5rem; font-weight: 700; }
+
+    /* Per-unit breakdown */
+    .per-unit-table { width: 100%; border-collapse: collapse; margin: 2rem 0; background: linear-gradient(145deg, #121d2e, #0d1520); border: 1px solid #243352; border-radius: 18px; overflow: hidden; }
+    .per-unit-table th { text-align: left; padding: 12px 18px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #94a3b8; border-bottom: 1px solid #1a2740; background: rgba(13,21,32,0.6); }
+    .per-unit-table td { padding: 12px 18px; font-size: 0.85rem; color: #dde4ef; border-bottom: 1px solid rgba(26,39,64,0.6); }
+    .per-unit-table .best { color: #34d399; font-weight: 600; }
+
     footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #243352; color: #94a3b8; font-size: 0.85rem; text-align: center; }
     footer a { color: #d4a853; text-decoration: none; margin: 0 8px; }
     footer a:hover { text-decoration: underline; }
-    @media (max-width: 600px) { h1 { font-size: 2rem; } .container { padding: 1rem; } }
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; } .container { padding: 1rem; }
+      .plan-item { flex-direction: column; align-items: flex-start; gap: 4px; }
+      .plan-price { text-align: left; }
+      .feature-table { font-size: 0.75rem; }
+      .feature-table th, .feature-table td { padding: 8px 10px; }
+    }
   </style>
 </head>
 <body>
@@ -77,6 +113,12 @@
     </div>
     <h1>Philippine Condo Management Made Simple</h1>
     <p>Stop juggling spreadsheets and group chats. <strong class="gold">ManageYourCondo</strong> gives you one dashboard for all your rental properties — units, tenants, rent collection, lease agreements, and maintenance tracking.</p>
+
+    <!-- Slot counter -->
+    <div class="slot-counter">
+      🚀 Only <span class="count" id="remainingSlots">43</span> of 50 Founding Member slots remain
+    </div>
+
     <a href="https://app.condo.yinzhentechnologies.com" class="cta">Get your free first month – No credit card</a>
 
     <h2>Everything a Filipino landlord needs</h2>
@@ -87,6 +129,12 @@
       <div class="feature"><strong>🔧 Maintenance Requests</strong> Tenants submit issues with photos. You track and resolve them — all inside the platform.</div>
       <div class="feature"><strong>📊 Live Analytics</strong> See collection rates, occupancy trends, and unit ROI at a glance.</div>
       <div class="feature"><strong>🔐 Tenant Portal</strong> Tenants can pay rent, view history, sign leases, and request maintenance — anytime.</div>
+    </div>
+
+    <!-- Xendit Trust Section -->
+    <div class="trust-banner">
+      <p><span class="highlight">🔒 Direct‑to‑Owner Split Payments via Xendit</span><br/>
+      When a tenant pays rent online, the money goes <strong>directly to your own Xendit account</strong> — not to us. A small ₱20 platform fee is split automatically. We never hold your funds. Not for a second. Not ever.</p>
     </div>
 
     <!-- Launch Pricing -->
@@ -119,7 +167,123 @@
       <p>🔒 <strong>Founding Member Promise:</strong> If you join before December 31, 2026, your elevated launch limits are permanent. They will never be reduced — even when standard plan limits adjust in 2027. You trusted us early. We reward that trust forever.</p>
     </div>
 
-    <a href="https://app.condo.yinzhentechnologies.com" class="cta">Claim your free month</a>
+    <!-- Post-pricing CTA -->
+    <a href="https://app.condo.yinzhentechnologies.com" class="cta">Claim Your Founding Member Slot →</a>
+
+    <!-- Feature Comparison Table -->
+    <h2>What's Included in Each Plan</h2>
+    <table class="feature-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Basic</th>
+          <th>Professional</th>
+          <th>Premium</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="row-header">Max Units (Launch)</td><td>50</td><td>150</td><td>500</td></tr>
+        <tr><td class="row-header">Owner Dashboard & Analytics</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td class="row-header">Unit & Tenant Management</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td class="row-header">Manual Payments</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td class="row-header">Bulk Unit Creation</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td class="row-header">Prorated Rent Calculation</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td class="row-header">Tenant Portal</td><td><span class="cross">✗</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td class="row-header">Online Payments (GCash/Maya/Card)</td><td><span class="cross">✗</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td class="row-header">Lease Generator & E‑Signature</td><td><span class="cross">✗</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td class="row-header">Maintenance Requests with Photos</td><td><span class="cross">✗</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td class="row-header">Automated Email Reminders</td><td><span class="cross">✗</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td class="row-header">Xendit Split Routing</td><td><span class="cross">✗</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td class="row-header">Priority Support</td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td class="row-header">CSV Export</td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="check">✓</span></td></tr>
+      </tbody>
+    </table>
+
+    <!-- Competitive Comparison (Expanded) -->
+    <div class="competitor-hook">
+      <p style="margin-bottom:1.5rem;font-size:1.2rem;color:#f0f4ff;"><strong>Why landlords switch to ManageYourCondo</strong></p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;text-align:left;">
+        <div>
+          <p style="color:#f87171;margin-bottom:0.3rem;"><strong>Kondo Ko</strong></p>
+          <p style="font-size:0.9rem;color:#94a3b8;margin-bottom:0;">Full‑service agency, not SaaS<br/><span class="strikethrough">₱18,000–₱35,000/month</span><br/><span style="color:#34d399;">You: ₱1,500/month</span><br/><span class="gold">6–19× cheaper, self‑service</span></p>
+        </div>
+        <div>
+          <p style="color:#f87171;margin-bottom:0.3rem;"><strong>iRealtee</strong></p>
+          <p style="font-size:0.9rem;color:#94a3b8;margin-bottom:0;">Brokerage OS, custom pricing<br/><span class="strikethrough">No public price, complex</span><br/><span style="color:#34d399;">You: Transparent, fixed plan</span><br/><span class="gold">GCash/Maya, Xendit split routing</span></p>
+        </div>
+        <div>
+          <p style="color:#f87171;margin-bottom:0.3rem;"><strong>Buildium (US)</strong></p>
+          <p style="font-size:0.9rem;color:#94a3b8;margin-bottom:0;"><span class="strikethrough">$62/month for 20 units</span><br/><span style="color:#34d399;">You: ₱2,900 for 150 units</span><br/><span class="gold">7.5× more units, half the price</span></p>
+        </div>
+        <div>
+          <p style="color:#f87171;margin-bottom:0.3rem;"><strong>AppFolio (US)</strong></p>
+          <p style="font-size:0.9rem;color:#94a3b8;margin-bottom:0;"><span class="strikethrough">$280/month minimum</span><br/><span style="color:#34d399;">You: ₱4,900 for 500 units</span><br/><span class="gold">Massive savings at scale</span></p>
+        </div>
+      </div>
+      <p style="margin-top:1.5rem;font-size:0.9rem;color:#b8c4d4;">All our plans include Xendit split routing, lease e‑signature, maintenance tracking, and analytics — the same enterprise features that global platforms charge 5–10× more for, built specifically for Philippine landlords.</p>
+    </div>
+
+    <!-- Detailed Competitor Feature Table -->
+    <h2>How We Compare</h2>
+    <table class="feature-table">
+      <thead>
+        <tr>
+          <th>😎</th>
+          <th>ManageYourCondo</th>
+          <th>Kondo Ko</th>
+          <th>iRealtee</th>
+          <th>Buildium</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="row-header">Pricing model</td><td>Fixed per month</td><td>Service fee (not SaaS)</td><td>Custom / per-transaction</td><td>Per unit</td></tr>
+        <tr><td class="row-header">Entry price</td><td class="best">₱1,500/mo</td><td>₱18,000+/mo</td><td>Unpublished</td><td class="cross">$62/mo</td></tr>
+        <tr><td class="row-header">Online payments (GCash/Maya)</td><td><span class="check">✓</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td></tr>
+        <tr><td class="row-header">Xendit split routing</td><td><span class="check">✓</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td></tr>
+        <tr><td class="row-header">Tenant portal</td><td><span class="check">✓</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td class="row-header">Lease generator (PH‑compliant)</td><td><span class="check">✓</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td></tr>
+        <tr><td class="row-header">Maintenance tracking w/ photos</td><td><span class="check">✓</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td></tr>
+        <tr><td class="row-header">Self‑service dashboard</td><td><span class="check">✓</span></td><td><span class="cross">✗ (agent runs it)</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td class="row-header">Built for PH market</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="cross">✗ (US‑centric)</span></td></tr>
+      </tbody>
+    </table>
+
+    <!-- Per-Unit Cost Breakdown -->
+    <h2>Per‑Unit Cost: See the Difference</h2>
+    <table class="per-unit-table">
+      <thead>
+        <tr>
+          <th>Plan</th>
+          <th>Monthly Price</th>
+          <th>Units</th>
+          <th>Cost Per Unit</th>
+          <th>vs. Global Average ($1–$5)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-header">Basic (Launch)</td>
+          <td>₱1,500</td>
+          <td>50</td>
+          <td><strong>₱30</strong> ($0.52)</td>
+          <td class="best">2–10× cheaper</td>
+        </tr>
+        <tr>
+          <td class="row-header">Professional (Launch) ⭐</td>
+          <td>₱2,900</td>
+          <td>150</td>
+          <td><strong>₱19.33</strong> ($0.34)</td>
+          <td class="best">3–15× cheaper</td>
+        </tr>
+        <tr>
+          <td class="row-header">Premium (Launch)</td>
+          <td>₱4,900</td>
+          <td>500</td>
+          <td><strong>₱9.80</strong> ($0.17)</td>
+          <td class="best">6–29× cheaper</td>
+        </tr>
+      </tbody>
+    </table>
 
     <!-- Standard Pricing -->
     <h2>Standard Pricing <span style="font-size:0.9rem;color:#94a3b8;">(Starting January 2027)</span></h2>
@@ -143,10 +307,20 @@
       <p style="margin-top:1rem;font-size:0.85rem;color:#b8c4d4;">All plans include unlimited users. Professional & Premium unlock online payments, leases, tenant portal, and advanced features.</p>
     </div>
 
+    <!-- Final CTA -->
+    <a href="https://app.condo.yinzhentechnologies.com" class="cta">Claim Your Founding Member Slot →</a>
+
     <footer>
       <p>© 2026 Yinzhen Technologies. ManageYourCondo is built for the Philippine market.</p>
       <p><a href="https://app.condo.yinzhentechnologies.com">Login</a> <a href="#">Privacy</a> <a href="#">Terms</a></p>
     </footer>
   </div>
+
+  <!-- Slot counter placeholder (update with real data from your backend) -->
+  <script>
+    // Static placeholder – replace with a real API call later
+    const remaining = 47; // update this number manually or fetch from your backend
+    document.getElementById('remainingSlots').textContent = remaining;
+  </script>
 </body>
 </html>
