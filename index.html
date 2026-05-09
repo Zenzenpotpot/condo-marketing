@@ -58,8 +58,11 @@
     .plan-item:last-child { border-bottom: none; }
     .plan-name { font-weight: 600; color: #f0f4ff; }
     .plan-price { color: #d4a853; font-weight: 500; }
+    .plan-units { font-size: 0.85rem; color: #94a3b8; }
     .offer-banner { background: linear-gradient(135deg, rgba(251,191,36,0.1), rgba(251,191,36,0.05)); border: 1px solid rgba(251,191,36,0.3); border-left: 4px solid #fbbf24; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
     .offer-banner p { margin-bottom: 0; color: #fbbf24; font-weight: 500; }
+    .grandfather-banner { background: linear-gradient(135deg, rgba(52,211,153,0.1), rgba(52,211,153,0.05)); border: 1px solid rgba(52,211,153,0.3); border-left: 4px solid #34d399; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
+    .grandfather-banner p { margin-bottom: 0; color: #34d399; font-weight: 500; }
     footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #243352; color: #94a3b8; font-size: 0.85rem; text-align: center; }
     footer a { color: #d4a853; text-decoration: none; margin: 0 8px; }
     footer a:hover { text-decoration: underline; }
@@ -75,6 +78,7 @@
     <h1>Philippine Condo Management Made Simple</h1>
     <p>Stop juggling spreadsheets and group chats. <strong class="gold">ManageYourCondo</strong> gives you one dashboard for all your rental properties — units, tenants, rent collection, lease agreements, and maintenance tracking.</p>
     <a href="https://app.condo.yinzhentechnologies.com" class="cta">Get your free first month – No credit card</a>
+
     <h2>Everything a Filipino landlord needs</h2>
     <div class="features">
       <div class="feature"><strong>🏢 Unit & Tenant Management</strong> Track every unit and tenant across multiple properties.</div>
@@ -84,17 +88,61 @@
       <div class="feature"><strong>📊 Live Analytics</strong> See collection rates, occupancy trends, and unit ROI at a glance.</div>
       <div class="feature"><strong>🔐 Tenant Portal</strong> Tenants can pay rent, view history, sign leases, and request maintenance — anytime.</div>
     </div>
-    <h2>Plans for every size</h2>
+
+    <!-- Launch Pricing -->
+    <h2>🚀 Founding Member Launch Pricing</h2>
+    <p style="color:#94a3b8;font-size:0.9rem;">Available July – December 2026. First 50 Founding Members lock these limits forever.</p>
     <div class="plans">
-      <div class="plan-item"><span class="plan-name">Basic</span><span class="plan-price">₱1,500/month</span></div>
-      <div class="plan-item"><span class="plan-name">Professional</span><span class="plan-price">₱2,900/month</span></div>
-      <div class="plan-item"><span class="plan-name">Premium</span><span class="plan-price">₱4,900/month</span></div>
-      <p style="margin-top:1rem;font-size:0.9rem;color:#b8c4d4;">Up to 50 / 150 / 500 units respectively. All plans include unlimited users. Professional & Premium unlock online payments, leases, tenant portal, and advanced features.</p>
+      <div class="plan-item">
+        <span class="plan-name">Basic</span>
+        <span class="plan-units">Up to 50 units · 10 properties</span>
+        <span class="plan-price">₱1,500/month</span>
+      </div>
+      <div class="plan-item">
+        <span class="plan-name">Professional ⭐</span>
+        <span class="plan-units">Up to 150 units · 30 properties</span>
+        <span class="plan-price">₱2,900/month</span>
+      </div>
+      <div class="plan-item">
+        <span class="plan-name">Premium</span>
+        <span class="plan-units">Up to 500 units · 100 properties</span>
+        <span class="plan-price">₱4,900/month</span>
+      </div>
+      <p style="margin-top:1rem;font-size:0.85rem;color:#b8c4d4;">Professional and Premium unlock online payments, lease generator, tenant portal, maintenance tracking, and priority support.</p>
     </div>
+
     <div class="offer-banner">
-      <p>🎉 <strong>Founding Members offer:</strong> First 50 sign‑ups get 1 month of the <span style="color:#fbbf24;">Professional plan free</span>. Launching July 2026.</p>
+      <p>🎉 <strong>Founding Members offer:</strong> First 50 sign‑ups get 1 month of the <span style="color:#fbbf24;">Professional plan free</span>. No credit card. Launching July 2026.</p>
     </div>
+
+    <div class="grandfather-banner">
+      <p>🔒 <strong>Founding Member Promise:</strong> If you join before December 31, 2026, your elevated launch limits are permanent. They will never be reduced — even when standard plan limits adjust in 2027. You trusted us early. We reward that trust forever.</p>
+    </div>
+
     <a href="https://app.condo.yinzhentechnologies.com" class="cta">Claim your free month</a>
+
+    <!-- Standard Pricing -->
+    <h2>Standard Pricing <span style="font-size:0.9rem;color:#94a3b8;">(Starting January 2027)</span></h2>
+    <p style="color:#94a3b8;font-size:0.9rem;">For new sign‑ups after the launch period. Founding Members keep their launch limits permanently.</p>
+    <div class="plans">
+      <div class="plan-item">
+        <span class="plan-name">Basic</span>
+        <span class="plan-units">Up to 20 units · 5 properties</span>
+        <span class="plan-price">₱1,500/month</span>
+      </div>
+      <div class="plan-item">
+        <span class="plan-name">Professional</span>
+        <span class="plan-units">Up to 80 units · 20 properties</span>
+        <span class="plan-price">₱2,900/month</span>
+      </div>
+      <div class="plan-item">
+        <span class="plan-name">Premium</span>
+        <span class="plan-units">Up to 250 units · 50 properties</span>
+        <span class="plan-price">₱4,900/month</span>
+      </div>
+      <p style="margin-top:1rem;font-size:0.85rem;color:#b8c4d4;">All plans include unlimited users. Professional & Premium unlock online payments, leases, tenant portal, and advanced features.</p>
+    </div>
+
     <footer>
       <p>© 2026 Yinzhen Technologies. ManageYourCondo is built for the Philippine market.</p>
       <p><a href="https://app.condo.yinzhentechnologies.com">Login</a> <a href="#">Privacy</a> <a href="#">Terms</a></p>
