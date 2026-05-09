@@ -93,6 +93,15 @@
     .per-unit-table td { padding: 12px 18px; font-size: 0.85rem; color: #dde4ef; border-bottom: 1px solid rgba(26,39,64,0.6); }
     .per-unit-table .best { color: #34d399; font-weight: 600; }
 
+    /* FAQ */
+    .faq-item { margin-bottom: 1.2rem; }
+    .faq-question { font-weight: 600; color: #f0f4ff; cursor: pointer; margin-bottom: 0.4rem; }
+    .faq-answer { color: #b8c4d4; font-size: 0.9rem; margin-left: 1rem; border-left: 2px solid #243352; padding-left: 1rem; }
+
+    /* Trust badges */
+    .trust-badges { display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: center; margin: 2rem 0; color: #94a3b8; font-size: 0.85rem; }
+    .trust-badges span { display: flex; align-items: center; gap: 6px; }
+
     footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #243352; color: #94a3b8; font-size: 0.85rem; text-align: center; }
     footer a { color: #d4a853; text-decoration: none; margin: 0 8px; }
     footer a:hover { text-decoration: underline; }
@@ -285,6 +294,37 @@
       </tbody>
     </table>
 
+    <!-- FAQ Section -->
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <p class="faq-question">What happens after my free first month?</p>
+      <p class="faq-answer">You'll be billed monthly at your chosen plan rate. Cancel anytime — no lock-in, no penalty.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">Can I upgrade or downgrade my plan later?</p>
+      <p class="faq-answer">Yes. Your plan adjusts immediately and any prorated differences are handled automatically.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">Is my data secure?</p>
+      <p class="faq-answer">Yes. All data is encrypted in transit (HTTPS/TLS) and at rest. We never share your information with third parties.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">What if I exceed my unit limit?</p>
+      <p class="faq-answer">You'll be prompted to upgrade to the next tier. No surprise fees — just a clear upgrade path.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">How does the split payment work?</p>
+      <p class="faq-answer">When a tenant pays online, the rent is split in real time: a ₱20 platform fee stays with us; the rest lands directly in your Xendit account. We never hold your funds.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">Do you offer a setup or onboarding service?</p>
+      <p class="faq-answer">We provide free onboarding for all Founding Members. I'll personally help you set up your properties and tenants.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">What happens to my data if I cancel?</p>
+      <p class="faq-answer">You can export all your data anytime. After cancellation, your data is retained for 30 days, then permanently deleted.</p>
+    </div>
+
     <!-- Standard Pricing -->
     <h2>Standard Pricing <span style="font-size:0.9rem;color:#94a3b8;">(Starting January 2027)</span></h2>
     <p style="color:#94a3b8;font-size:0.9rem;">For new sign‑ups after the launch period. Founding Members keep their launch limits permanently.</p>
@@ -307,19 +347,34 @@
       <p style="margin-top:1rem;font-size:0.85rem;color:#b8c4d4;">All plans include unlimited users. Professional & Premium unlock online payments, leases, tenant portal, and advanced features.</p>
     </div>
 
+    <!-- Founder's Personal Promise -->
+    <h2>From the Founder</h2>
+    <div class="card" style="padding:1.8rem;">
+      <p style="margin-bottom:0;color:#dde4ef;">I built ManageYourCondo because I was tired of seeing Filipino landlords lose time and money to spreadsheets and manual follow-ups. If you ever feel this platform isn't right for you, email me personally at <strong class="gold">contact@yinzhentechnologies.com</strong>. I'll help you export your data, cancel your plan, and part ways with no hard feelings.</p>
+      <p style="margin-top:1rem;color:#94a3b8;">— Zen, Founder, Yinzhen Technologies</p>
+    </div>
+
+    <!-- Trust Badges Row -->
+    <div class="trust-badges">
+      <span>🔒 SSL Encrypted</span>
+      <span>🛡️ Data Encrypted at Rest</span>
+      <span>💳 Xendit-Verified Partner</span>
+      <span>🇵🇭 Philippine-Registered Business</span>
+    </div>
+
     <!-- Final CTA -->
     <a href="https://app.condo.yinzhentechnologies.com" class="cta">Claim Your Founding Member Slot →</a>
 
     <footer>
-      <p>© 2026 Yinzhen Technologies. ManageYourCondo is built for the Philippine market.</p>
-      <p><a href="https://app.condo.yinzhentechnologies.com">Login</a> <a href="#">Privacy</a> <a href="#">Terms</a></p>
+      <p>© 2026 Yinzhen Technologies. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a> · <a href="https://app.condo.yinzhentechnologies.com">Login</a></p>
     </footer>
   </div>
 
   <!-- Slot counter placeholder (update with real data from your backend) -->
   <script>
     // Static placeholder – replace with a real API call later
-    const remaining = 47; // update this number manually or fetch from your backend
+    const remaining = 43; // update this number manually or fetch from your backend
     document.getElementById('remainingSlots').textContent = remaining;
   </script>
 </body>
