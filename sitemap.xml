@@ -2,22 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://condo.yinzhentechnologies.com/</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-05-09</lastmod>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://condo.yinzhentechnologies.com/pricing.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://condo.yinzhentechnologies.com/blog/how-to-collect-rent-online-philippines.html</loc>
     <lastmod>2026-05-07</lastmod>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yinzhentechnologies.com/blog/how-to-collect-rent-online-in-the-philippines-2026-guide-for-landlords</loc>
-    <lastmod>2026-05-07</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://app.condo.yinzhentechnologies.com/</loc>
-    <lastmod>2026-05-07</lastmod>
-    <priority>1.0</priority>
   </url>
 </urlset>
